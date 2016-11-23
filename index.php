@@ -1,13 +1,26 @@
 <?php include 'header.php' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 
 <head>
-   <title>Browser Fingerprint Collector</title>
+    <title>Browser Fingerprint Collector</title>
 </head>
 
 <body>
-   <p>This website is intended to collect information from your browser to create a unique browser fingerprint.  If you did not indent to come here and do not want us to collect this information, please leave immediately</p>
+    <h1 align="Center">This website is intended to collect information from your browser to create a unique fingerprint.  If you did not intend to come here and do not want us to collect this information, please close the page.</h1>
+    <!--If you know what you are doing and would like to submit your browser information, use this code: "BW63b6NCBSXaZ2z4"-->
+
+    <?php
+        if($_SESSION['passcodeIncorrect'] == true){
+            echo '<p align="center">Passcode Incorrect</p>';
+        }$_SESSION['passcodeIncorrect'] = false;
+    ?>
+
+    <form action="acceptTerms.php" method="post" align="center">
+        <p>
+            <label for="passcode">Passcode:</label>
+            <input type="text" name="passcode" id="passcode">
+        </p>
+        <input type="submit" value="Start">
+    </form>
 </body>
 </html>
