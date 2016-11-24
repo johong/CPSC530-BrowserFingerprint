@@ -6,5 +6,8 @@
 <html>
 <body>
     <h2 align='center'>Starting collection of browser data, please wait</h2>
+    <?php
+        include("browserCollectScript.php");
+    ?>
 </body>
 </html>
