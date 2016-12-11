@@ -16,10 +16,6 @@
     ?>
 
     <form action="acceptTerms.php" method="post" align="center">
-        <p>
-            <label for="passcode">Passcode:</label>
-            <input type="text" name="passcode" id="passcode">
-        </p>
         <input type="submit" value="Start">
     </form>
 </body>

@@ -15,3 +15,19 @@
     $userIPCountry = $_SESSION['userIPCountry'];
     echo("<p><b>User IP Address Country:</b> $userIPCountry</p>");
 ?>
+
+<html>
+<body>
+<div id="example"></div>
+<script type="text/javascript">
+var x=navigator.plugins.length; // store the total no of plugin stored 
+var txt="Total plugin installed: "+x+"<br/>";
+txt+="Available plugins are->"+"<br/>";
+for(var i=0;i<x;i++)
+{
+  txt+=navigator.plugins[i].name + "<br/>"; 
+}
+document.getElementById("example").innerHTML=txt;
+</script>
+</body>
+</html>
